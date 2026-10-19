@@ -1,1 +1,120 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171a18">
+  <meta name="description" content="A Gen X Soft Club inspired photo editor. Apply muted, atmospheric presets to your photographs.">
+  <title>SOFT CLUB — Image Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Soft Club home">
+      <span class="brand-mark">SC.</span>
+      <span class="brand-name">SOFT CLUB <small>IMAGE LAB / 001</small></span>
+    </a>
+
+    <div class="topbar-status">
+      <span class="status-dot"></span>
+      LOCAL IMAGE ENGINE
+    </div>
+
+    <a class="header-link" href="#editor">OPEN EDITOR ↗</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="eyebrow">VISUAL RESEARCH UNIT — VOL. 001</div>
+      <h1>Make it feel<br><span>like a memory.</span></h1>
+      <p>An experimental image lab for quiet colours, soft light and analogue moods.</p>
+      <a class="primary-button" href="#editor">ENTER THE LAB <span>↘</span></a>
+      <div class="intro-index">EST. 1998 / REIMAGINED 2026</div>
+    </section>
+
+    <section class="editor-section" id="editor">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">01 / WORKSPACE</div>
+          <h2>The image lab</h2>
+        </div>
+        <span class="section-note">YOUR IMAGE. YOUR ATMOSPHERE.</span>
+      </div>
+
+      <div class="workspace">
+        <aside class="side-panel">
+          <div class="panel-heading">01 — SOURCE</div>
+          <label class="upload-zone" for="image-upload">
+            <span class="upload-icon">＋</span>
+            <strong>Import an image</strong>
+            <span>JPG · PNG · WEBP</span>
+            <span class="upload-action">CHOOSE FILE ↗</span>
+          </label>
+          <input id="image-upload" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+          <p class="privacy-note">Images are intended to stay on your device.</p>
+
+          <div class="panel-heading tool-heading">02 — TRANSFORM</div>
+          <button class="tool-button" id="crop-button" type="button">□ <span>Crop image</span><span>↗</span></button>
+          <button class="tool-button" id="rotate-button" type="button">↻ <span>Rotate 90°</span><span>↗</span></button>
+          <button class="tool-button" id="reset-button" type="button">↺ <span>Reset edits</span><span>↗</span></button>
+        </aside>
+
+        <div class="preview-panel">
+          <div class="preview-toolbar">
+            <span id="image-status">NO IMAGE LOADED</span>
+            <button id="compare-button" type="button" disabled>HOLD TO COMPARE</button>
+          </div>
+
+          <div class="preview-stage" id="preview-stage">
+            <div class="empty-state" id="empty-state">
+              <div class="empty-symbol">◌</div>
+              <div>NOTHING HERE. YET.</div>
+              <p>Import a photograph to begin your study.</p>
+            </div>
+            <canvas id="photo-canvas" hidden></canvas>
+          </div>
+
+          <div class="preview-footer">
+            <span>SOFT CLUB / IMAGE STUDY</span>
+            <span id="dimensions">— × — PX</span>
+          </div>
+        </div>
+
+        <aside class="side-panel adjustment-panel">
+          <div class="panel-heading">03 — FILM EMULATIONS</div>
+          <div class="preset-list" id="preset-list"></div>
+
+          <div class="panel-heading tool-heading">04 — FINE ADJUSTMENTS</div>
+          <div id="adjustment-controls"></div>
+
+          <div class="export-panel">
+            <label for="export-format">EXPORT FORMAT</label>
+            <select id="export-format">
+              <option value="image/jpeg">JPEG / HIGH QUALITY</option>
+              <option value="image/png">PNG / LOSSLESS</option>
+              <option value="image/webp">WEBP / EFFICIENT</option>
+            </select>
+            <button class="export-button" id="export-button" type="button" disabled>EXPORT IMAGE ↗</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="eyebrow">02 / THE PHILOSOPHY</div>
+      <h2>Less saturation.<br>More <span>feeling.</span></h2>
+      <p>Made for portraits, landscapes, city nights and everything in between.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>SOFT CLUB® — IMAGE LAB</span>
+    <span>MADE FOR THE IN-BETWEEN.</span>
+    <span>V. 001 / 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
